@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  }
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+  
+    transition: all .9s ease-in-out;
+  }
+  .burger {
+    width: 50px;
+    height: 6px;
+    background: orange;
+    transition: all .9s ease-in-out;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: orange;
+    border-radius: 5px;
+    transition: all .9s ease-in-out;
+  }
+  .burger::before {
+    transform: translateY(-16px);
+  }
+  .burger::after {
+    transform: translateY(16px);
+  }
+
+  .menu-btn.open .burger {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+  .menu-btn.open .burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+  .menu-btn2 {
+     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    
+  }
+  .burger2 {
+    width: 50px;
+    height: 6px;
+    background: orange;
+    border-radius: 5px;
+      transition: all .1s ease-in-out;
+  }
+  .burger2::before,
+  .burger2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: orange;
+    border-radius: 5px;
+      transition: all .1s ease-in-out;
+  }
+  .burger2::before {
+    transform: translateY(-16px);
+  }
+  .burger2::after {
+    transform: translateY(16px);
+  }
+
+  .menu-btn2.open2 .burger2 {
+    transform: translateX(-50px);
+    background: transparent;
+
+  }
+  .menu-btn2.open2 .burger2::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn2.open2 .burger2::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
